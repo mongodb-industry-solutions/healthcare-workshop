@@ -18,7 +18,7 @@ The connection to MongoDB requires a URI string that is provided via an environm
 
 ```bash
 export MONGO_URI='your-mongo-uri'
-
+```
 
 Alternatively, for ease of use in Jupyter Notebooks, you can set the variable directly within the notebooks.
 
@@ -26,18 +26,24 @@ Alternatively, for ease of use in Jupyter Notebooks, you can set the variable di
 
 1. **Create a new conda environment**:
 
+```bash
 conda create –name healthcare_env python=3.11
+```
 
 2. **Activate the environment**:
-
+```bash
 conda activate healthcare_env
-
+```
 3. **Install required packages**:
 
+```bash
 pip install pymongo Faker jupyter
-
+```
 4. **Launch Jupyter Notebook**:
-
+   
+```bash
+jupyter notebook
+```
 ## Notebooks Overview
 
 ### S1 - Data Generation (Patients)
@@ -75,8 +81,3 @@ This notebook illustrates how to change an existing schema in MongoDB. Specifica
 **File: `S4 - generate-appointments.ipynb`**
 
 This notebook generates appointments for patients in the system. It demonstrates creating various appointment types (e.g., consultation, follow-up) and includes additional details such as doctor information, services provided, and location using MongoDB’s document model capabilities.
-
-- **Features**:
-- Use of embeddings and arrays for complex data structures.
-- Appointment validation and overlap checks.
-- Generation of random appointment details like doctor info, services, and location.
